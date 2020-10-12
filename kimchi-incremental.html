@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="moreMakers()" class="bmaker">Hire more kimchi makers!</button>
+    <script>
+        var player = {
+            kimchi: 0,
+            maker: 1
+        };
+        function moreMakers()
+        {
+            if (kimchi < 5)
+            {
+                document.getElementsByClassName("bmaker").innerHTML = "Insufficient money.";
+                var t = Date();
+                while (Date()==t){}
+                document.getElementsByClassName("bmaker").innerHTML = "Hire more kimchi makers!";
+            }
+            else
+            {
+                kimchi-=5;
+                ++maker;
+            }
+        }
+        setInterval(function(){player.kimchi+=player.maker}, 5000)
+    </script>
+</body>
+</html>
